@@ -44,3 +44,6 @@ e.g. "C:\Users\rmastour\.virtualenvs\django_Payment_Service-hKmBDVso"
 ```
 > by pasting the latter path 
 "C:\Users\rmastour\.virtualenvs\django_Payment_Service-hKmBDVso\bin\python"
+
+4. use the + sign on top right corner of terminal to open as many terminals as you wish 
+5. (CTRL+L) to clear the window 
