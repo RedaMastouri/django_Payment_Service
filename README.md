@@ -13,8 +13,9 @@ pipenv install django
 pipenv shell
 ```
 
-# Start Django-admin
+# Start Django-admin 
+With a suffix ".", we are telling django to use the current projectname as current main directory
 ```
-django-admin startproject paymentservice
+django-admin startproject paymentservice .
 ```
 
