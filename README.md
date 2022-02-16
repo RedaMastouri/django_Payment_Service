@@ -7,3 +7,8 @@ Django-based Payment Service v1.0
 pip 3 install pipenv
 pipenv install django
 ```
+
+# Launching the subshell in virtual environment
+```
+pipenv shell
+```
