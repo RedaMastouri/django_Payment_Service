@@ -42,5 +42,5 @@ e.g. "C:\Users\rmastour\.virtualenvs\django_Payment_Service-hKmBDVso"
 ```
 >python: select Interpeter
 ```
->> by pasting the latter path 
+> by pasting the latter path 
 "C:\Users\rmastour\.virtualenvs\django_Payment_Service-hKmBDVso\bin\python"
