@@ -18,4 +18,5 @@ With a suffix ".", we are telling django to use the current projectname as curre
 ```
 django-admin startproject paymentservice .
 ```
-
+# Django-Skeleton
+Please refer to the following link: >> https://django-project-skeleton.readthedocs.io/en/latest/structure.html
