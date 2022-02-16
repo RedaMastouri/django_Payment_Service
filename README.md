@@ -20,3 +20,10 @@ django-admin startproject paymentservice .
 ```
 # Django-Skeleton
 Please refer to the following link: >> https://django-project-skeleton.readthedocs.io/en/latest/structure.html
+
+# Configuring Django's settings
+without having runserver error for django, we use the following command on teh manage.py which is the app WRAPPER with a custom port number e.g. 9000
+```
+python manage.py runserver 9000
+```
+<a href="#" target="_blank" rel="noreferrer"><img alt="Django_Welcome_Screen" style="text-align: center; width: 70%;" src="img/welcome.png" /></a>
