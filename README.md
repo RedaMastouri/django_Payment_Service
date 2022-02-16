@@ -12,3 +12,9 @@ pipenv install django
 ```
 pipenv shell
 ```
+
+# Start Django-admin
+```
+django-admin startproject paymentservice
+```
+
