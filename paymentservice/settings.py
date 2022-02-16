@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     #'django.contrib.sessions', #this manages the user's data
     'django.contrib.messages', # used to display notification to the user 
     'django.contrib.staticfiles', # this to manage the static files like CSS and images 
+    # we also need to add all the newly created apps in here ~ Reda
+    'playground', #here hour first beta app
 ]
 
 MIDDLEWARE = [

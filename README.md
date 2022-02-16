@@ -47,3 +47,13 @@ e.g. "C:\Users\rmastour\.virtualenvs\django_Payment_Service-hKmBDVso"
 
 4. use the + sign on top right corner of terminal to open as many terminals as you wish 
 5. (CTRL+L) to clear the window 
+
+# Creating  a new playground app 
+1. run this command
+```
+python manage.py startapp playground
+```
+2. Go back to the project setting.py and add the app name 
+```
+'playground', #here to add the newest app to settings.py
+```
