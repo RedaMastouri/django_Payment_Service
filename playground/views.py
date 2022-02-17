@@ -20,7 +20,7 @@ def say_hello(request):
     3. send an email 
     4. and so on..
     '''
-    reponse = HttpResponse('Hello there!') #this one needs to be mapped to a URL
+    reponse = HttpResponse('Hello there! I work for Fulcrum Digital Inc.') #this one needs to be mapped to a URL
     #So when we get a request at that URL, this function will be called 
     return reponse 
 

@@ -13,9 +13,17 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from re import S
 from django.contrib import admin
 from django.urls import path
 
+# now let's add these libraries
+from django.contrib import admin
+from django.urls import path, include
+
+from playground import views
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('playground/', include('playground.urls')), #newly added
 ]

@@ -82,3 +82,39 @@ def say_hello(request):
     #So when we get a request at that URL, this function will be called 
     return reponse 
 ```
+
+# Mapping a URL to the newly created view 
+1. in the project folder, let's create a file called "urls.py"
+```
+from django.urls import path
+#from current folder, import views
+from . import views
+
+
+'''
+Now we declare a special variable called urlpatterns
+'''
+# Here we have a so-called URLConf 
+#playground/hello
+urlpatterns = [
+    path('hello/', views.say_hello)
+
+]
+```
+
+2.  Now we go to the main urls.py of the project 
+```
+from django.contrib import admin
+from django.urls import path
+
+# now let's add these libraries
+from django.contrib import admin
+from django.urls import path, include
+
+from playground import views
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('playground/', include('playground.urls')), #newly added
+]
+```
