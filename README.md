@@ -118,3 +118,28 @@ urlpatterns = [
     path('playground/', include('playground.urls')), #newly added
 ]
 ```
+
+# adding template 
+1. in app folder, let's create another folder called "templates"
+2. in "templates" we add a new html file called "hello.html"
+```
+<h1>{{name}}'s Portfolio Section:</h1>
+```
+3. back to view function, instead of returning HttpResponse('string blabla'), we will use the render function to render a template and return a html markup to the client 
+4. in views.py
+```
+def say_hello(request):
+    #What we can do is the following 
+    '''
+    1. Pull data from a DB
+    2. Transfrom data 
+    3. send an email 
+    4. and so on..
+    '''
+    #reponse = HttpResponse('Hello there! I work for Fulcrum Digital Inc.') #this one needs to be mapped to a URL
+    #So when we get a request at that URL, this function will be called 
+    
+    #render html
+    reponse = render(request, 'hello.html', {'name': 'Hammouda'}) # we add 3rd params as dictionary
+    return reponse 
+``` 
