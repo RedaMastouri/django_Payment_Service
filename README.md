@@ -140,6 +140,6 @@ def say_hello(request):
     #So when we get a request at that URL, this function will be called 
     
     #render html
-    reponse = render(request, 'hello.html', {'name': 'Hammouda'}) # we add 3rd params as dictionary
+    reponse = render(request, 'hello.html', {'name': 'Reda'}) # we add 3rd params as dictionary
     return reponse 
 ``` 

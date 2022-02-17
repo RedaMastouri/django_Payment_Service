@@ -1,1 +1,9 @@
-<h1>{{name}}'s Portfolio Section:</h1>
+<!-- here we ad a parameter name -->
+{% if name %}
+    <h1>{{name}}'s Portfolio Section:</h1>
+{% else %}
+    <h1> Start-Up Incubator Program Section:</h1>
+{% load static %} 
+    <img src="{% static "playground/media/Startup-Incubator.png" %}" alt="home" />
+{% endif %}
+
