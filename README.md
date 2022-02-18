@@ -170,3 +170,56 @@ def say_hello(request):
     ]
 }              
 ```
+
+# Using Django Debug toolbar
+1. install via pipenv
+```
+pipenv install django-debug-toolbar
+```
+2. add 'debug_toolbar', in the installed INSTALLED_APPS
+3. CTRL+P to bring the seacrh box and search for settings.py
+```
+INSTALLED_APPS = [
+    'django.contrib.admin', #give admin interface to manage the data
+    'django.contrib.auth', #this used to authenticate the users in the app
+    'django.contrib.contenttypes',
+    #'django.contrib.sessions', #this manages the user's data
+    'django.contrib.messages', # used to display notification to the user 
+    'django.contrib.staticfiles', # this to manage the static files like CSS and images 
+    # we also need to add all the newly created apps in here ~ Reda
+    'playground', #here hour first beta app
+    'debug_toolbar', #for debugging
+]
+```
+4. Adding a new path to the URLConf module of the project folder 
+```
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('playground/', include('playground.urls')), #newly added
+    path('__debug__/', include('debug_toolbar.urls')), #newly added
+]
+```
+5. Enabling a middleware to hook into django's request response processing. 
+In our settings module we have a setting called MIDDLEWARE
+```
+MIDDLEWARE = [
+    'debug_toolbar.middleware.DebugToolbarMiddleware', #Newly added for debugging
+    'django.middleware.security.SecurityMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    
+]
+```
+6. Configuring Internal IPs:
+```
+#Configuring Internal IPs
+INTERNAL_IPS = [
+    # .. 
+    '127.0.0.1',
+    # ..
+]
+```

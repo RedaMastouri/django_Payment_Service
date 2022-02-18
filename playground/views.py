@@ -48,6 +48,15 @@ def startup(request):
 '''
 Stream the camera 
 '''
-def mouth(request):
-    return render(request, "mouth.html", {"name": "layghfer lik"})
 
+def calculate():
+    x = 1
+    return x
+
+def mouth(request):
+    x = calculate()
+    return render(request, "mouth.html", {"name": x})
+'''
+Debug toolbar:
+'''
+# this debug toolbar car serve to merge both the cut point and conf modeu

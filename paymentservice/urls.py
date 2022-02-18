@@ -20,10 +20,12 @@ from django.urls import path
 # now let's add these libraries
 from django.contrib import admin
 from django.urls import path, include
+#import debug_toolbar
 
 from playground import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('playground/', include('playground.urls')), #newly added
+    path('__debug__/', include('debug_toolbar.urls')), #newly added
 ]

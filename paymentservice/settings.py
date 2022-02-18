@@ -39,9 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles', # this to manage the static files like CSS and images 
     # we also need to add all the newly created apps in here ~ Reda
     'playground', #here hour first beta app
+    'debug_toolbar', #for debugging
 ]
 
 MIDDLEWARE = [
+    'debug_toolbar.middleware.DebugToolbarMiddleware', #Newly added for debugging
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -49,6 +51,14 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    
+]
+
+#Configuring Internal IPs
+INTERNAL_IPS = [
+    # .. 
+    '127.0.0.1',
+    # ..
 ]
 
 ROOT_URLCONF = 'paymentservice.urls'
