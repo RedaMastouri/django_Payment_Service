@@ -1,9 +1,49 @@
 <!-- here we ad a parameter name -->
-{% if name %}
-    <h1>{{name}}'s Portfolio Section:</h1>
-{% else %}
-    <h1> Start-Up Incubator Program Section:</h1>
-{% load static %} 
-    <img src="{% static "playground/media/Startup-Incubator.png" %}" alt="home" />
-{% endif %}
+
+
+
+<!-- Load CSS-->
+{% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'playground/media/site.css' %}" />
+    <div class="navbar">
+        <a href="{% url 'home' %}" class="navbar-brand">Home Page   |</a>
+        <a href="{% url 'startup' %}" class="navbar-brand">|  Incubator Program</a>
+        <a href="{% url 'mouth' %}" class="navbar-brand">|  Haywa!</a>
+
+    </div>
+
+
+
+{% block title %}
+    Home Page | My Incubation Initiatives
+{% endblock %}
+
+
+<!--Header-->
+{% block content %}
+    <h1> {{name}}'s Start-Up Incubator Program Section:</h1>
+        <body>
+            <strong>Hi {{ name }}</strong>, <br>
+            -> Current date is {{ date | date:"l, d F Y" }}. <br>
+            -> Current time is {{ date | time:"h:i:s A" }}.
+            <p>
+            <br>
+            <object style="height: 390px; width: 750px"><param name="movie" value="https://www.youtube.com/watch?v=rHux0gMZ3Eg"><param name="allowFullScreen" value="true"><param name="allowScriptAccess" value="always"><embed src="http://www.youtube.com/v/rHux0gMZ3Eg?version=3" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="640" height="390"></object>
+            </p>
+        </body>
+    
+    <!--Static Image-->
+    <p>
+        {% load static %} <img src="{% static "playground/media/dellali.JPG" %}" alt="Incubator Program" />
+    </p>
+
+    <!--Footer-->
+    <div class="footer-content">
+        <hr />
+        <footer>
+            <p>Copyright © 2022 Django Web Project</p>
+        </footer>
+    </div>
+
+{% endblock %}
 

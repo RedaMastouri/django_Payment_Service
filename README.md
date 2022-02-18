@@ -143,3 +143,30 @@ def say_hello(request):
     reponse = render(request, 'hello.html', {'name': 'Reda'}) # we add 3rd params as dictionary
     return reponse 
 ``` 
+
+# Debugging Django
+1. Click "Run and Debug Panel" on VSCode
+2. Click on "Create a launch.json file"
+3. in the popped-up list, choose "Django"
+4. The code looks lke:
+```
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Django",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}\\manage.py",
+            "args": [
+                "runserver",
+                "9000"
+            ],
+            "django": true
+        }
+    ]
+}              
+```

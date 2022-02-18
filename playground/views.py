@@ -1,8 +1,10 @@
 from cgitb import html
+from re import T
+from urllib import response
 from django.shortcuts import render
 #here we add this library
 from django.http import HttpResponse
-
+from datetime import datetime
 
 # Create your views here.
 # A view function is a function that takes a request and return a response
@@ -13,7 +15,7 @@ from django.http import HttpResponse
 # That part in Django is called "Template"
 
 
-def say_hello(request):
+def say_hello(request, name):
     #What we can do is the following 
     '''
     1. Pull data from a DB
@@ -25,6 +27,27 @@ def say_hello(request):
     #So when we get a request at that URL, this function will be called 
     
     #render html
-    reponse = render(request, 'hello.html', {'name': ''}) # we add 3rd params as dictionary
+    reponse = render(request, 
+                    'hello.html', 
+                    {'name': name,
+                    'date': datetime.now()
+                    }) # we add 3rd params as dictionary
     return reponse 
+
+
+def home(request): 
+    jawab = render(request, 
+                    'home.html',) # we add 3rd params as dictionary
+    
+    return jawab
+
+def startup(request):
+    return render(request, "hello.html", {"name": "bel contra 3lik"})
+
+
+'''
+Stream the camera 
+'''
+def mouth(request):
+    return render(request, "mouth.html", {"name": "layghfer lik"})
 
